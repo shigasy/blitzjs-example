@@ -22,7 +22,7 @@ export const EditQuestion = () => {
           try {
             const updated = await updateQuestionMutation({
               where: { id: question.id },
-              data: { name: "MyNewName" },
+              data: { text: "MyNewText" },
             })
             await setQueryData(updated)
             alert("Success!" + JSON.stringify(updated))
